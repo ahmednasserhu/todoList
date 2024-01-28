@@ -1,0 +1,16 @@
+<div class="container d-flex align-items-center">
+    @if(markedDone === false){
+        <button class="btn btn-success" (click)="markAsDone()">Done</button>
+    }@else {
+        <button class="btn btn-secondary" (click)="UndoItem()">UnDo</button>
+    }
+    <button class="btn btn-danger ms-2" style="margin-right: 20px" (click)="deleteItem()">Delete</button>
+    <textarea
+    class="form-control w-75"
+    placeholder="Leave a comment here"
+    id="floatingTextareaDisabled"
+    [ngClass]="markedDone ? 'done' : 'text-secondary' "
+    disabled
+    >{{mission}}</textarea>
+    <label for="floatingTextareaDisabled"></label>
+</div>

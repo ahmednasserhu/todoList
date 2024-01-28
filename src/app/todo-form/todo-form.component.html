@@ -1,0 +1,9 @@
+<!-- todo-form.component.html -->
+<div class="container d-flex justify-content-center mt-2 align-items-start mb-5">
+    <div class="input-group" style="background-color: #f8f9fa; padding: 20px; border-radius: 10px;">
+      <span class="input-group-text fw-bolder block">BE productive write your upcoming work here!</span>
+      <textarea class="form-control w-100" aria-label="With textarea" [(ngModel)]="itemToCommit"></textarea>
+      <button type="button" class="btn btn-primary mt-2 ms-auto" (click)="sendItem()">Add</button>
+    </div>
+  </div>
+  

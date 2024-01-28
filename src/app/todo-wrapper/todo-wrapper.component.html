@@ -1,0 +1,12 @@
+<app-todo-form (sendToParent)="recieveFromChild($event)"></app-todo-form>
+<div class="container" style="background-color: #f8f9fa; padding: 20px; border-radius: 10px;">
+    <h5 class="text-center fw-bold text-primary">Todo List</h5>
+    <hr class="w-50" style="margin-right: auto; margin-left: auto;"/>
+    @for(thing of thingsToDo; track $index){
+        <app-todo-list [mission]="thing.text" [markedDone]="thing.done" (deleteThing)="deleteItem($index)"
+        (markAsDoneMission)="markAsDone($index)"
+        (Undo)="UndoItem($index)"></app-todo-list>
+        <br>
+    }
+    
+</div>
